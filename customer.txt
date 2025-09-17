@@ -1,0 +1,50 @@
+class Customer:
+    # Initialize the customer with an empty list of items
+    def __init__(self):
+        self.items = []
+
+    # Add an item with a name and quantity to the customer
+    def add_item(self, item_name, qty):
+        item = (item_name, qty)
+        self.items.append(item)
+
+    # Remove an item with a specific name from the customer
+    def remove_item(self, item_name):
+        for item in self.items:
+            if item[0] == item_name:
+                self.items.remove(item)
+                break
+
+    # Calculate and return the total price of items in the customer's cart
+    def calculate_total(self):
+        total = 0
+        for item in self.items:
+            total += item[1]  # Accessing the quantity of the item
+        return total
+
+# Creating a customer object
+obj1 = Customer()
+
+# Add items to the customer cart
+obj1.add_item("apple", 100)
+obj1.add_item("orange", 150)
+obj1.add_item("guava", 200)
+
+# Display the current items and calculate the total
+print("Current items in cart:")
+for item in obj1.items:
+    print(item[0], "=", item[1])
+
+total = obj1.calculate_total()
+print("Total price is:", total)
+
+# Remove the item "orange" from the cart
+obj1.remove_item("orange")
+
+# Display the updated items after removing "orange"
+print("\nUpdated items in cart after removing orange:")
+for item in obj1.items:
+    print(item[0], "-", item[1])
+
+total2 = obj1.calculate_total()
+print("Total price after removal:", total2)
