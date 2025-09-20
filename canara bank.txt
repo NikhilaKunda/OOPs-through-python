@@ -1,0 +1,32 @@
+class Canara:
+    def __init__(self):
+        self.balance=0
+        print("Welcome to the Canara Bank")
+    def deposit(self):
+        amount=float(input("Enter amount to deposited:"))
+        self.balance+=amount
+        print("\n deposited amount is:",amount)
+    def withdraw(self):
+        amount=float(input("Enter amount to withdraw:"))
+        if self.balance>=amount:
+          self.balance-=amount
+          print("\n withdraw amount is:",amount)
+        else:
+            print("\n insufficient balance")
+    def checkbalance(self):
+        print("\n net available balance is:",self.balance)
+#driver code
+obj1=Canara()
+obj1.deposit()
+obj1.withdraw()
+obj1.checkbalance()
+
+Welcome to the Canara Bank
+Enter amount to deposited:1000
+
+ deposited amount is: 1000.0
+Enter amount to withdraw:599
+
+ withdraw amount is: 599.0
+
+ net available balance is: 401.0
