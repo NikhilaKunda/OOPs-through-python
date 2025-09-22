@@ -1,0 +1,31 @@
+class nikki():
+          def __init__(self,name,age,salary):
+                    self.name=name
+                    self.age=age
+                    self.salary=salary
+class nikhila():
+          def __init__(self,name,age,salary,id):
+                    self.name=name
+                    self.age=age
+                    self.salary=salary
+                    self.id=id
+class nk(nikki,nikhila):
+          def __init__(self,name,age,salary,id):
+                    self.name=name
+                    self.age=age
+                    self.salary=salary
+                    self.id=id
+nk1=nikki('nikhila kunda',18,10000)
+nk2=nikhila('anjali',18,200000,1709)
+print(nk1.age)
+print(nk2.age)
+print(nk1.name)
+print(nk2.name)
+
+
+output:
+18
+18
+nikhila kunda
+anjali
+
