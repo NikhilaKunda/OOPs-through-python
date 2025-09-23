@@ -1,0 +1,27 @@
+class nikki():
+            def __init__(self,name,section,branch):
+                        self.name=name
+                        self.section=section
+                        self.branch=branch
+class stu1(nikki):
+             def __init__(self,name,section,branch):
+                        self.name=name
+                        self.section=section
+                        self.branch=branch
+class stu2(nikki):
+             def __init__(self,name,section,branch):
+                        self.name=name
+                        self.section=section
+                        self.branch=branch
+std1=stu1('Nikhila','B section','CSE')
+std2=stu2('Srilakshmi','B section','CSE')
+print(std1.name)
+print(std2.section)
+print(std1.branch)
+
+
+output:
+
+Nikhila
+B section
+CSE
